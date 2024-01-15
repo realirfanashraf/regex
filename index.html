@@ -8,7 +8,7 @@
 <body>
     <h1>Hello</h1>
     <label for="userInput">Input:</label>
-    <input type="text" id="userInput" name="userInput" onchange="handleOnChange()">
+    <input type="text" id="userInput" name="userInput" oninput="handleOnChange()">
     <p id="output">Output: </p>
 </body>
 <script>
@@ -19,6 +19,7 @@
             document.getElementById('output').innerHTML = 'Output: ' + validationResult;
         } catch (error) {
             console.error(error);
+            document.getElementById('output').innerHTML = 'Output: ' + error;
         }
     }
 
